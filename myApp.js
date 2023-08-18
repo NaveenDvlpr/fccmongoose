@@ -1,10 +1,9 @@
 require('dotenv').config();
 const mongoose = require('mongoose');
-const Person = require('./personSchema');
 
 mongoose.connect(process.env.MONGO_URI);
 
-let Person;
+let Person = require('./personSchema');
 
 const createAndSavePerson = (done) => {
   done(null /*, data*/);
