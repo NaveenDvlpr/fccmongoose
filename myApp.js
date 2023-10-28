@@ -13,7 +13,7 @@ const createAndSavePerson = (done) => {
   });
   newPerson.save((err, result) => {
     if(err) done(err);
-    else done(null, result);
+    else done(result);
   })
 };
 
