@@ -1,7 +1,7 @@
 require('dotenv').config();
 const mongoose = require('mongoose');
 
-mongoose.connect(process.env.MONGO_URI, { useUnifiedTopology: true });
+mongoose.connect(process.env.MONGO_URI, { useMongoClient: true }).then(() => console.log('connected to DB')).catch(err => console.log(err));
 
 let Person = require('./personSchema');
 
