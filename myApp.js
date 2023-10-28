@@ -18,18 +18,6 @@ const createAndSavePerson = (done) => {
 };
 
 const createManyPeople = (arrayOfPeople, done) => {
-  arrayOfPeople = [
-    {
-      name: "Naveen",
-      age: 24,
-      favoriteFoods: ["chicken","paneer","dal"]
-    },
-    {
-      name: "Saritha",
-      age: 18,
-      favoriteFoods: ["chicken","mutton","fish"]
-    }
-  ]
   Person.create(arrayOfPeople)
     .then(result => done(null, result))
     .catch(err => done(err))
