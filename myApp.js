@@ -75,8 +75,8 @@ const removeManyPeople = (done) => {
   const nameToRemove = "Mary";
   Person.remove({name: nameToRemove}, (err, result) => {
     if(err) done(err);
-    else done(result);
-  })
+    else done(null, result);
+  });
 };
 
 const queryChain = (done) => {
